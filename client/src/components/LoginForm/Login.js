@@ -3,7 +3,15 @@ import "./style.css";
 
 function Login() {
   return(
-    <h2>Login</h2>
+    <form className="form">
+          <div className="formInput">
+            <input type="email" value="Email"/>
+            </div>
+          <div className="formInput">
+            <input type="password" value="Password"/>
+            </div>
+        <button>Submit</button>
+      </form>
   )
 }
 
