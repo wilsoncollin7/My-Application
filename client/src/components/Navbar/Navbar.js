@@ -6,7 +6,11 @@ import "./style.css"
 function Navbar() {
   return(
     <div className="navbar">
-      <h1>navbar</h1>
+      <a className="navbarBrand" href="/home">YEET</a>
+      <div className="navbarButtonDiv">
+        <a className="navBtn" href="/login">Login</a>
+        <a className="navBtn" href="/login">Logout</a>
+      </div>
     </div>
   )
 };
