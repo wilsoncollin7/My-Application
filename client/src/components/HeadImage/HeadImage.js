@@ -1,5 +1,5 @@
 import React from 'react';
-import Face from "./face.png";
+import Face from "./faceIcon.png";
 import "./style.css";
 
 function HeadImage() {
