@@ -4,7 +4,7 @@ import "./style.css";
 
 function HeadImage() {
   return(
-    <img className="faceIamge" src={Face} alt="face"></img>
+    <img className="faceImage" src={Face} alt="face"></img>
   )
 }
 
