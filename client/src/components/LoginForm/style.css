@@ -1,0 +1,16 @@
+.loginContainer {
+  background-color: burlywood;
+  height: 800px;
+  width: 800px;
+}
+
+.loginNav {
+  background-color: cadetblue;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+}
+
+.loginNavBtn {
+  margin: 30px;
+}
