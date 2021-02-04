@@ -1,15 +1,22 @@
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// components
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+
 import './App.css';
-import HeadImage from "./components/HeadImage/HeadImage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Here is my app</p>
-          <HeadImage />
-        <p>My name is Collin</p>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch> 
+          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/login" component={Login} />
+        </Switch>
+      </div>
+    </Router>
   );
   
 }
