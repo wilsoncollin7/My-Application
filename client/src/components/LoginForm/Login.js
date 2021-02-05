@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import API from "../../utils/API";
+// styling
 import "./style.css";
 
 function Login() {
@@ -14,6 +16,14 @@ function Login() {
     e.preventDefault();
     if (formObject.email && formObject.password) {
       console.log(formObject);
+      API.loginUser({
+        email: formObject.email,
+        password: formObject.password
+      })
+      // .then((res) => {
+      //   console.log("user sent!")
+      // })
+      // .catch(err => console.log(err))
     }
   }
 

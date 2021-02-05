@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import API from "../../utils/API";
 // styling
 import "./style.css";
 
@@ -15,6 +16,16 @@ function Register() {
     e.preventDefault();
     if (formObject.firstName && formObject.lastName && formObject.email && formObject.password) {
       console.log(formObject);
+      API.signUpUser({
+        firstName: formObject.firstName,
+        lastName: formObject.lastName,
+        email: formObject.email,
+        password: formObject.password
+      })
+      // .then((res) => {
+      //   console.log("user sent!")
+      // })
+      // .catch(err => console.log(err))
     }
   }
 
