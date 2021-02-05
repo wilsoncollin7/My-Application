@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+require("dotenv/config");
+
 
 const app = express();
 
@@ -12,6 +14,16 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 } 
+
+mongoose.connect(process.env.MONGODB_URI,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  },
+  () => console.log('Connected to DB!')
+);
 
 // Start the API server 
 app.listen(PORT, function() {
