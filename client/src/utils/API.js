@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -19,6 +19,6 @@ export default {
   },
   signUpUser: function(userData) {
     console.log("REGISTER USER" + JSON.stringify(userData));
-    // return axios.post("/auth/register", userData)
+    return axios.post("/auth/register", userData)
   }
 };

@@ -4,7 +4,7 @@ require("dotenv/config");
 const session = require("express-session");
 const MongoStore = require('connect-mongo')(session);
 
-// const routes = require("./server/routes");
+const routes = require("./server/routes");
 
 const app = express();
 
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
 } 
 
 // Add routes, both API and view
-// app.use(routes);
+app.use(routes);
 
 mongoose.connect(process.env.MONGODB_URI,
   {
