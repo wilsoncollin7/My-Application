@@ -45,6 +45,7 @@ function Login() {
             id: res.data[0]._id,
           }
           localStorage.setItem("user", JSON.stringify(user));
+          console.log(user)
           history.goBack();
         }
       })

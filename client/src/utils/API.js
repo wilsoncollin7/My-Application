@@ -15,7 +15,8 @@ export default {
   },
   logoutUser: function(userData) {
     console.log("LOGOUT USER" + JSON.stringify(userData));
-    // return axios.post("/auth/logout", userData)
+    localStorage.clear();
+    return;
   },
   signUpUser: function(userData) {
     console.log("REGISTER USER" + JSON.stringify(userData));
