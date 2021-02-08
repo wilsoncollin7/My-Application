@@ -22,10 +22,10 @@ function Register() {
         email: formObject.email,
         password: formObject.password
       })
-      // .then((res) => {
-      //   console.log("user sent!")
-      // })
-      // .catch(err => console.log(err))
+      .then((res) => {
+        console.log("user sent!")
+      })
+      .catch(err => console.log(err))
     }
   }
 
