@@ -2,12 +2,16 @@ import React from 'react';
 // styling
 import "./style.css";
 // components
+import Container from "../Container/Container";
 
 function DashComponent() {
+
+  const user = JSON.parse(localStorage.getItem("user"));
+
   return(
-    <div>
-      <h1>dash component</h1>
-    </div>
+    <Container>
+      <h1>Hello {user.firstName}</h1>
+    </Container>
   )
 }
 
