@@ -14,7 +14,10 @@ function Navbar() {
     <div className="navbar">
       <a className="navbarBrand" href="/home">YEET</a>
       <div className="navbarButtonDiv">
-        <a className="navBtn" href="/login">Login</a>
+        {
+          localStorage.getItem("user") ?
+            <a className="navBtn" href="/dashboard">Dash</a> : <a className="navBtn" href="/login">Login</a>
+        }
         <a className="navBtn" href="/home" onClick={handleOnClick}>Logout</a>
       </div>
     </div>
