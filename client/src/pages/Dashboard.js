@@ -1,11 +1,13 @@
 import React from 'react';
 // components
+import Card from "../components/Card/Card";
+import DashComponent from "../components/DashComponent/DashComponent";
 
 function Dashboard() {
   return(
-    <>
-      <h1>Dashboard</h1>
-    </>
+    <Card header="Dashboard">
+      <DashComponent />
+    </Card>
   )
 }
 

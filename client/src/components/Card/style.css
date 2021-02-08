@@ -1,0 +1,15 @@
+.cardContainer {
+  height: 600px;
+  width: 600px;
+  background-color: burlywood;
+}
+
+.cardHeaderContainer {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: cadetblue;
+}
+
+.cardHeader {
+  font-size: 1.5rem;
+}
