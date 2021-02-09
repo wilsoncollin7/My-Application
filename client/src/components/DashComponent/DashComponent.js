@@ -11,6 +11,7 @@ function DashComponent() {
   return(
     <Container>
       <h1>Hello {user.firstName}</h1>
+      <p>this is the dashboard</p>
     </Container>
   )
 }
