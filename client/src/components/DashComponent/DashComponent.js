@@ -12,6 +12,7 @@ function DashComponent() {
     <Container>
       <h1>Hello {user.firstName}</h1>
       <p>this is the dashboard</p>
+      <p>Adding some stuff here</p>
     </Container>
   )
 }
