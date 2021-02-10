@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path');
 const mongoose = require("mongoose");
 require("dotenv/config");
 const session = require("express-session");
@@ -14,8 +15,16 @@ const PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+// } 
+
+const publicPath = path.join(__dirname, '..', 'public');
+
+app.use(express.static(publicPath));
+
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static(publicPath));;
 } 
 
 // Add routes, both API and view
