@@ -17,7 +17,7 @@ function CreatePostComponent() {
   };
 
   function handleFormSubmit(e) {
-    e.preventDefault();
+    // e.preventDefault();
     if (postObject.post) {
       console.log(postObject);
       API.newPost({

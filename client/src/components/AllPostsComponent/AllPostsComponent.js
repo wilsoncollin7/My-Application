@@ -1,25 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import API from "../../utils/API";
 // styling
 import "./style.css";
 // components
 import Container from "../Container/Container";
+import Post from "../Post/Post";
 
 function AllPostsComponent() {
 
+  const [ allPosts, setAllPosts ] = useState([]);
+
   const loadPosts = function() {
     API.getAllPosts()
-      .then(res => console.log(res.data))
+      .then(res => setAllPosts(res.data))
       .catch(err => console.log(err));
   };
 
   useEffect(() => {
     loadPosts()
-  });
+  }, []);
 
   return(
     <Container>
-      <h1>all posts</h1>
+      {allPosts.map(({ _id, post, user, date}) => (
+        <Post key={_id} post={post} user={user} date={date}/>
+      ))}
     </Container>
   )
 }
