@@ -2,6 +2,9 @@ import axios from "axios";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
+  newPost: function() {
+    console.log("post made");
+  },
   getAllUsers: function() {
     console.log("GET ALL USERS");
   },

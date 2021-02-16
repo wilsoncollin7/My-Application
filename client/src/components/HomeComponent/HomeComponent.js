@@ -3,12 +3,13 @@ import React from 'react';
 import "./style.css";
 // components
 import Container from "../Container/Container";
+import CreatePostComponent from "../CreatePostComponent/CreatePostComponent";
 
 function HomeComponent() {
 
   return(
     <Container>
-      <p>this is home</p>
+      <CreatePostComponent />
       <p>Adding some stuff here</p>
     </Container>
   )

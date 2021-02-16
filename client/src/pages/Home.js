@@ -10,11 +10,12 @@ function Home() {
     <>
       <HeaderImage />
       {
-        localStorage.getItem("user") ?
+        localStorage.getItem("user") 
+          ?
         <Card>
           <HomeComponent />
-        </Card> : 
-        
+        </Card> 
+          : 
         <Card>
           <h1>MUST LOG IN</h1>
         </Card>

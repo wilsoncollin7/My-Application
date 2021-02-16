@@ -33,16 +33,16 @@ function Register() {
       <form className="form">
           <div className="formInput">
             <input onChange={handleInputChange} type="text" placeholder="First Name" name="firstName"/>
-            </div>
+          </div>
           <div className="formInput">
             <input onChange={handleInputChange} type="text" placeholder="Last Name" name="lastName"/>
-            </div>
+          </div>
           <div className="formInput">
             <input onChange={handleInputChange} type="email" placeholder="Email" name="email"/>
-            </div>
+          </div>
           <div className="formInput">
             <input onChange={handleInputChange} type="password" placeholder="Password" name="password"/>
-            </div>
+          </div>
         <button onClick={handleFormSubmit} type="submit">Register</button>
       </form>
   )
