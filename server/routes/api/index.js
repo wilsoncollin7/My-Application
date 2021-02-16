@@ -1,9 +1,7 @@
-const express = require('express');
-const router = express.Router();
-const postController = require("../../controller/postController");
+const router = require("express").Router();
+const apiRoutes = require("./api");
 
-// this route is just used to get the user basic info
-router.get('/getPosts', postController.getAllPosts);
-router.post('/newPost', postController.newPost);
+// trails routes
+router.use("/posts", apiRoutes);
 
 module.exports = router;

@@ -22,7 +22,8 @@ function CreatePostComponent() {
       console.log(postObject);
       API.newPost({
         post: postObject.post,
-        user: (user.firstName + " " + user.lastName)
+        user: (user.firstName + " " + user.lastName),
+        userID: user.id
       })
       .then((res) => {
         console.log("Post Sent!")

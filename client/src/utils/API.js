@@ -4,11 +4,16 @@ import axios from "axios";
 export default {
   newPost: function(postData) {
     console.log("post made");
-    return axios.post("/api/newPost", postData)
+    return axios.post("/api/posts/", postData)
   },
   getAllPosts: function() {
-    return axios.get("/api/getPosts");
+    return axios.get("/api/posts");
   },
+  getPosts: function(id) {
+    console.log(id)
+    // return axios.get("/api/posts/", id);
+  },
+  // ---------------------------------------------------
   getAllUsers: function() {
     console.log("GET ALL USERS");
   },

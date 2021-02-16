@@ -1,8 +1,9 @@
 .faceImage {
-  height: 80px;
+  height: 150px;
+  margin: 30px;
 }
 
-/* @media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
   .faceImage {
     animation: faceImage-spin infinite 5s linear;
   }
@@ -15,5 +16,5 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}
 
