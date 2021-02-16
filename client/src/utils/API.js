@@ -6,6 +6,9 @@ export default {
     console.log("post made");
     return axios.post("/api/newPost", postData)
   },
+  getAllPosts: function() {
+    return axios.get("/api/getPosts");
+  },
   getAllUsers: function() {
     console.log("GET ALL USERS");
   },

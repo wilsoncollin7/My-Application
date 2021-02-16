@@ -5,7 +5,8 @@ mongoose.promise = Promise;
 // Define userSchema
 const postSchema = new Schema({
 	post: { type: String, unique: false },
-	user: { type: String, unique: false }
+	user: { type: String, unique: false },
+  date: { type: Date, default: Date.now }
 });
 
 // Create reference to User & export

@@ -9,6 +9,8 @@ function CreatePostComponent() {
 
   const [postObject, setPostObject] = useState({});
 
+  const user = JSON.parse(localStorage.getItem("user"));
+
   function handleInputChange(e) {
     const { name, value } = e.target;
     setPostObject({...postObject, [name]: value})
@@ -19,12 +21,13 @@ function CreatePostComponent() {
     if (postObject.post) {
       console.log(postObject);
       API.newPost({
-        firstName: postObject.post
+        post: postObject.post,
+        user: (user.firstName + " " + user.lastName)
       })
-      // .then((res) => {
-      //   console.log("Post Sent!")
-      // })
-      // .catch(err => console.log(err))
+      .then((res) => {
+        console.log("Post Sent!")
+      })
+      .catch(err => console.log(err))
     }
   }
 

@@ -4,13 +4,14 @@ import "./style.css";
 // components
 import Container from "../Container/Container";
 import CreatePostComponent from "../CreatePostComponent/CreatePostComponent";
+import AllPostsComponent from "../AllPostsComponent/AllPostsComponent";
 
 function HomeComponent() {
 
   return(
     <Container>
       <CreatePostComponent />
-      <p>Adding some stuff here</p>
+      <AllPostsComponent />
     </Container>
   )
 }
