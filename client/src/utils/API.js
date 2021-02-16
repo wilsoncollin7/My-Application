@@ -2,8 +2,9 @@ import axios from "axios";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  newPost: function() {
+  newPost: function(postData) {
     console.log("post made");
+    return axios.post("/api/newPost", postData)
   },
   getAllUsers: function() {
     console.log("GET ALL USERS");
