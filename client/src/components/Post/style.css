@@ -4,3 +4,7 @@
   padding: 8px;
   border-radius: 10px;
 }
+
+.postBtn {
+  float: right;
+}

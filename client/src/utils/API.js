@@ -12,9 +12,10 @@ export default {
   getPosts: function(id) {
     return axios.get("/api/posts/", + id);
   },
-  // deletePosts: function(id) {
-  //   return axios.get("/api/posts/", + id);
-  // },
+  deletePosts: function(id) {
+    console.log("here " + id)
+    return axios.delete("/api/posts/", + id);
+  },
   // ---------------------------------------------------
   getAllUsers: function() {
     console.log("GET ALL USERS");

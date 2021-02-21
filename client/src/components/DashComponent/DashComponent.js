@@ -28,8 +28,8 @@ function DashComponent() {
   return(
     <Container>
       <h1>Hello {user.firstName}</h1>
-      {allPosts.map(({ _id, post, user, date}) => (
-        <Post key={_id} post={post} user={user} date={date}/>
+      {allPosts.map(item => (
+        <Post key={item._id} post={item.post} user={item.user} date={item.date} id={item._id}/>
       ))}
     </Container>
   )

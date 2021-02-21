@@ -7,7 +7,6 @@ router.route("/")
 
 router.route("/:id")
   .get(postController.getPosts)
-  // .put(postController.updateOne)
-  // .delete(postController.remove);
+  .delete(postController.deletePost);
 
 module.exports = router;
