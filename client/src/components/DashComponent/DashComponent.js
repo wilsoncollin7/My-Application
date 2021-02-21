@@ -14,11 +14,11 @@ function DashComponent() {
 
   const loadPosts = function() {
     API.getPosts(user.id)
-      // .then(res => {
-      //   setAllPosts(res.data)
-      //   console.log(allPosts)
-      // })
-      // .catch(err => console.log(err));
+      .then(res => {
+        setAllPosts(res.data)
+        // console.log(allPosts)
+      })
+      .catch(err => console.log(err));
   };
 
   useEffect(() => {
@@ -28,9 +28,9 @@ function DashComponent() {
   return(
     <Container>
       <h1>Hello {user.firstName}</h1>
-      {/* {allPosts.map(({ _id, post, user, date}) => (
+      {allPosts.map(({ _id, post, user, date}) => (
         <Post key={_id} post={post} user={user} date={date}/>
-      ))} */}
+      ))}
     </Container>
   )
 }
