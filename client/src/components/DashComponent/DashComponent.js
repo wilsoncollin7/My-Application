@@ -21,6 +21,13 @@ function DashComponent() {
       .catch(err => console.log(err));
   };
 
+  const handleOnClick = (id) => {
+    console.log(id)
+    API.deletePosts(id)
+      .then(() => loadPosts())
+      .catch(err => console.log(err));    
+  }
+
   useEffect(() => {
     loadPosts()
   }, []);
@@ -29,7 +36,7 @@ function DashComponent() {
     <Container>
       <h1>Hello {user.firstName}</h1>
       {allPosts.map(item => (
-        <Post key={item._id} post={item.post} user={item.user} date={item.date} id={item._id} home={false}/>
+        <Post key={item._id} post={item.post} user={item.user} date={item.date} id={item._id} home={false} handler={handleOnClick}/>
       ))}
     </Container>
   )
