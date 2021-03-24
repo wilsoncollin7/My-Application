@@ -23,7 +23,7 @@ function AllPostsComponent() {
   return(
     <Container>
       {allPosts.map(({ _id, post, user, date}) => (
-        <Post id={_id} key={_id} post={post} user={user} date={date}/>
+        <Post id={_id} key={_id} post={post} user={user} date={date} home={true}/>
       ))}
     </Container>
   )

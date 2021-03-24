@@ -16,7 +16,7 @@ function Post(props) {
       <h1>{props.post}</h1>
       <span>{props.user} </span>
       <span>{props.date}</span>
-      <button onClick={handleOnClick} className="postBtn">DELETE</button>
+      {props.home ? <></> : <button onClick={handleOnClick} className="postBtn">DELETE</button>}
     </div>
   )
 }
