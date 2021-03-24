@@ -14,7 +14,7 @@ export default {
   },
   deletePosts: function(id) {
     console.log("here " + id)
-    return axios.delete("/api/posts/", + id);
+    return axios.delete("/api/posts/" + id);
   },
   // ---------------------------------------------------
   getAllUsers: function() {
