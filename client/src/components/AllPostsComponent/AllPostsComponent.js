@@ -6,7 +6,7 @@ import "./style.css";
 import Container from "../Container/Container";
 import Post from "../Post/Post";
 
-function AllPostsComponent() {
+function AllPostsComponent(props) {
 
   const [ allPosts, setAllPosts ] = useState([]);
 

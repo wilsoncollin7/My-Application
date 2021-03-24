@@ -5,7 +5,7 @@ import "./style.css";
 // components
 import Container from "../Container/Container";
 
-function CreatePostComponent() {
+function CreatePostComponent(props) {
 
   const [postObject, setPostObject] = useState({});
 
@@ -27,6 +27,7 @@ function CreatePostComponent() {
       })
       .then((res) => {
         console.log("Post Sent!")
+        props.handler()
       })
       .catch(err => console.log(err))
     }
